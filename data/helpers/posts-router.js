@@ -31,24 +31,6 @@ router.get("/:id", async (req, res) => {
     });
   }
 });
-// router.post("/", (req, res) => {
-//   const newPost = req.body;
-//   if (newPost) {
-//     Posts.insert(newPost)
-//       .then(post => {
-//         res.status(201).json(post);
-//       })
-//       .catch(error => {
-//         res.status(500).json({
-//           error: "There was an error while saving the post to the database"
-//         });
-//       });
-//   } else {
-//     res.status(400).json({
-//       errorMessage: "Please provide text for the post."
-//     });
-//   }
-// });
 
 router.post("/", async (req, res) => {
   try {
