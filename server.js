@@ -1,5 +1,6 @@
 const express = require("express");
 const helmet = require("helmet");
+const cors = require("cors");
 
 const postsRouter = require("./data/helpers/posts-router");
 
@@ -7,14 +8,9 @@ const usersRouter = require("./data/helpers/users-router");
 
 const server = express();
 
-function team(req, res, next) {
-  req.team = "Web XVII";
-  next();
-}
-
 server.use(express.json());
 server.use(helmet());
-server.use(team);
+server.use(cors());
 
 server.use("/api/posts", postsRouter);
 
