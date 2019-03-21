@@ -12,9 +12,9 @@ server.use(express.json());
 server.use(helmet());
 server.use(cors());
 
-server.use("/api/posts", postsRouter);
+server.use("/posts", postsRouter);
 
-server.use("/api/users", usersRouter);
+server.use("/users", usersRouter);
 
 server.get("/", (req, res) => {
   res.send(`Welcome to Users-Posts API`);
