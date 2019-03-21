@@ -9,7 +9,7 @@ class App extends Component {
   };
 
   componentDidMount() {
-    axios.get("http://localhost:5000/api/posts").then(res => {
+    axios.get("https://iy-users-posts.herokuapp.com/posts").then(res => {
       this.setState({
         posts: res.data
       });
