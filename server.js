@@ -17,7 +17,7 @@ server.use("/api/posts", postsRouter);
 server.use("/api/users", usersRouter);
 
 server.get("/", (req, res) => {
-  res.send(`Welcome to Users API`);
+  res.send(`Welcome to Users-Posts API`);
 });
 
 module.exports = server;
