@@ -1,0 +1,8 @@
+.App {
+  text-align: center;
+  display: flex;
+  flex-flow: row wrap;
+  width: 650px;
+  justify-content: space-around;
+  margin-left: 20%;
+}
