@@ -3,6 +3,7 @@ const express = require("express");
 const Users = require("./userDb");
 
 const router = express.Router();
+const nameChecker = require("./middleware");
 
 router.get("/", async (req, res) => {
   try {
@@ -32,7 +33,7 @@ router.get("/:id", async (req, res) => {
   }
 });
 
-router.post("/", async (req, res) => {
+router.post("/", nameChecker, async (req, res) => {
   try {
     const user = await Users.insert(req.body);
     res.status(201).json(user);
